@@ -1,0 +1,14 @@
+# For macOS Ventura
+
+* enter into terminal: ssh-keygen -t ecdsa   # follow the prompt
+* enter into terminal: eval "$(ssh-agent -s)"   # this starts the ssh-agent
+
+* update your config file (~/.ssh/config) with the following:
+    Host github.com
+        AddKeysToAgent yes
+        UseKeychain yes
+        IdentityFile ~/.ssh/name_of_your_github_file
+
+
+  # add the SSH public key to your account on GitHub
+* ssh-add --apple-use-keychain ~/.ssh/id_ed25519
