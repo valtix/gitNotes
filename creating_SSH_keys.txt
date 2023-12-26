@@ -12,3 +12,13 @@
 
   # add the SSH public key to your account on GitHub
 * ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+
+
+
+
+* For Linux
+
+- enter in terminal: ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+- go to settings and click on "SSH and GPG keys"
+- click on "New SSH key"
+- enter the publick key that was generated from the first step above
