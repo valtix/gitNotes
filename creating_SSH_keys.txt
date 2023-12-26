@@ -22,3 +22,5 @@
 - go to settings and click on "SSH and GPG keys"
 - click on "New SSH key"
 - enter the publick key that was generated from the first step above
+- authenticate new SSH key by runnin the following in your terminal: ssh -T git@github.com
+- make sure you follow the prompt
