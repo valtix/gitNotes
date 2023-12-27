@@ -18,7 +18,10 @@
 
 * For Linux
 
-- enter in terminal: ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+1. Generate a new key: 
+    ```
+        ssh-keygen -t ecdsa   # follow the prompt
+    ```
 - go to settings and click on "SSH and GPG keys"
 - click on "New SSH key"
 - enter the publick key that was generated from the first step above
