@@ -7,11 +7,11 @@
     Host github.com
         AddKeysToAgent yes
         UseKeychain yes
-        IdentityFile ~/.ssh/name_of_your_github_file
+        IdentityFile ~/.ssh/name_of_your_private_github_file
 
 
   # add the SSH public key to your account on GitHub
-* ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+* ssh-add --apple-use-keychain ~/.ssh/name_of_your_private_ghithub_file
 
 
 
