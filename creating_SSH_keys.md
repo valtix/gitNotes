@@ -10,20 +10,30 @@
         IdentityFile ~/.ssh/name_of_your_private_github_file
 
 
-  # add the SSH public key to your account on GitHub
+- add the SSH public key to your account on GitHub
 * ssh-add --apple-use-keychain ~/.ssh/name_of_your_private_ghithub_file
 
 
 
 
-* For Linux
+# For Linux
 
-1. Generate a new key: 
+1. Generate a new key ( follow the prompt ): 
     ```
-        ssh-keygen -t ecdsa   # follow the prompt
+        ssh-keygen -t ecdsa
     ```
-- go to settings and click on "SSH and GPG keys"
-- click on "New SSH key"
-- enter the publick key that was generated from the first step above
-- authenticate new SSH key by running the following in your terminal: ssh -T git@github.com
-- make sure you follow the prompt
+2. Start the ssh-agent in the background:
+   ```
+        eval (ssh-agent -c)
+   ```
+3. Add the your SSH key to the SSH-Agent:
+    ```
+        ssh-add ~/.ssh/id_ecdsa
+   ```    
+4. Go to settings and click on "SSH and GPG keys"
+5. Click on "New SSH key"
+6. Enter the public key that was generated from the first step above
+7. Authenticate new SSH key by running the following in your terminal ( follow the prompt ):
+    ```
+        ssh -T git@github.com
+    ```
